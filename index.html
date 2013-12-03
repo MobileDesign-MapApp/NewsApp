@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+		<title>My News</title>
+		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.3.2.min.css"  />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.structure-1.3.2.css"  />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.theme-1.3.2.min.css"  />
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+	</head>
+	<body>
+		<!-- 
+        ///////////////////////////
+        		Home Page 
+        //////////////////////////
+        -->
+        <div data-role="page" id="homePage">
+        	<div data-role="header">
+				<h3 id="homePageTitle">My News Feeds</h3>
+				<a href="#settingsPage" data-icon="gear" class="ui-btn-right" data-transition="slide">Settings</a>
+			</div>
+			
+			<div data-role="content">
+				
+			</div>
+			
+			<div data-role="footer" data-id="nav-bar" data-position="fixed">
+				<!--<div data-role="navbar">
+					<ul>
+						<li><a href="#homePage" data-icon="home" class="ui-btn-active ui-state-persist" data-transition="slide">Home</a></li>
+						<li><a href="#settingsPage" data-icon="gear" data-transition="slide">Settings</a></li>
+						<li><a href="#infoPage" data-icon="info" data-transition="slide">App Info</a></li>
+					</ul>
+				</div>-->
+			</div>
+        </div>
+        
+        <!-- 
+        ///////////////////////////
+        		Details Page 
+        //////////////////////////
+        -->
+        <div data-role="page" id="detailsPage">
+        	<div data-role="header">
+        		<a data-rel="back" data-icon="arrow-l" class="ui-btn-left" data-transition="slide">Back</a>
+				<h3 id="detailsPageTitle">Details Page</h3>
+				<a href="#settingsPage" data-icon="gear" class="ui-btn-right">Settings</a>
+			</div>
+			
+			<div data-role="content">
+				
+			</div>
+			
+			<div data-role="footer" data-id="nav-bar" data-position="fixed">
+				<!--<div data-role="navbar">
+					<ul>
+						<li><a href="#homePage" data-icon="home" class="ui-btn-active ui-state-persist" data-transition="slide">Home</a></li>
+						<li><a href="#settingsPage" data-icon="gear" data-transition="slide">Settings</a></li>
+						<li><a href="#infoPage" data-icon="info" data-transition="slide">App Info</a></li>
+					</ul>
+				</div>-->
+			</div>
+        </div>
+        
+        <!-- 
+        ///////////////////////////
+        		Settings Page 
+        //////////////////////////
+        -->
+        <div data-role="page" id="settingsPage">
+        	<div data-role="header">
+        		<a href="#homePage" data-icon="arrow-l" class="ui-btn-left" data-transition="slide">My Feeds</a>
+				<h3>Settings</h3>
+			</div>
+			
+			<div data-role="content">
+				<ul id="settingsList" data-role="listview" data-inset="true" data-divider-theme="a">
+					<li data-role="list-divider">Reddit</li>
+					<li> 
+						<input type="checkbox" name="reddit_front_page_hot" id="reddit_front_page_hot" onchange="toggleNewsItem(this);" />
+						<label for="reddit_front_page_hot" class="settingsCheckbox">Front Page - Hot</label>
+					</li>
+					<li> 
+						<input type="checkbox" name="reddit_front_page_new" id="reddit_front_page_new" onchange="toggleNewsItem(this);" />
+						<label for="reddit_front_page_new" class="settingsCheckbox">Front Page - New</label>
+					</li>
+					<li> 
+						<input type="checkbox" name="reddit_front_page_top" id="reddit_front_page_top" onchange="toggleNewsItem(this);" />
+						<label for="reddit_front_page_top" class="settingsCheckbox">Front Page - Top</label>
+					</li>
+					<li data-role="list-divider">ESPN</li>
+					<li>
+						<input type="checkbox" name="espn_headlines" id="espn_headlines" onchange="toggleNewsItem(this);" />
+						<label for="espn_headlines" class="settingsCheckbox">Head Lines</label>
+					</li>
+					<li>
+						<input type="checkbox" name="espn_latest_news" id="espn_latest_news" onchange="toggleNewsItem(this);" />
+						<label for="espn_latest_news" class="settingsCheckbox">Latest News</label>
+					</li>
+					<li>
+						<input type="checkbox" name="espn_popular_stories" id="espn_popular_stories" onchange="toggleNewsItem(this);" />
+						<label for="espn_popular_stories" class="settingsCheckbox">Most Popular Stories</label>
+					</li>
+					<li>
+						<input type="checkbox" name="espn_nba" id="espn_nba" onchange="toggleNewsItem(this);" />
+						<label for="espn_nba" class="settingsCheckbox">NBA</label>
+					</li>
+					<li>
+						<input type="checkbox" name="espn_nfl" id="espn_nfl" onchange="toggleNewsItem(this);" />
+						<label for="espn_nfl" class="settingsCheckbox">NFL</label>
+					</li>
+					<li>
+						<input type="checkbox" name="espn_mlb" id="espn_mlb" onchange="toggleNewsItem(this);" />
+						<label for="espn_mlb" class="settingsCheckbox">MLB</label>
+					</li>
+					<li>
+						<input type="checkbox" name="espn_nhl" id="espn_nhl" onchange="toggleNewsItem(this);" />
+						<label for="espn_nhl" class="settingsCheckbox">NHL</label>
+					</li>
+					<li>
+						<input type="checkbox" name="espn_soccer" id="espn_soccer" onchange="toggleNewsItem(this);" />
+						<label for="espn_soccer" class="settingsCheckbox">Soccer</label>
+					</li>
+					<li>
+						<input type="checkbox" name="espn_golf" id="espn_golf" onchange="toggleNewsItem(this);" />
+						<label for="espn_golf" class="settingsCheckbox">Golf</label>
+					</li>
+					<li>
+						<input type="checkbox" name="espn_college_football" id="espn_college_football" onchange="toggleNewsItem(this);" />
+						<label for="espn_college_football" class="settingsCheckbox">College Football</label>
+					</li>
+					<li>
+						<input type="checkbox" name="espn_mens_college_basketball" id="espn_mens_college_basketball" onchange="toggleNewsItem(this);" />
+						<label for="espn_mens_college_basketball" class="settingsCheckbox">Mens College Basketball</label>
+					</li>
+				</ul>
+			</div>
+			
+			<div data-role="footer" data-id="nav-bar" data-position="fixed">
+				<!--<div data-role="navbar">
+					<ul>
+						<li><a href="#homePage" data-icon="home" data-transition="slide">Home</a></li>
+						<li><a href="#settingsPage" data-icon="gear" data-transition="slide" class="ui-btn-active ui-state-persist">Settings</a></li>
+						<li><a href="#infoPage" data-icon="info" data-transition="slide">App Info</a></li>
+					</ul>
+				</div>-->
+			</div>
+        </div>
+        
+        
+        <!--
+        ////////////////////////////
+        	Info Page
+        ///////////////////////////
+        -->
+		<div data-role="page" id="infoPage">
+        	<div data-role="header">
+        		<a data-rel="back" data-icon="arrow-l" class="ui-btn-left" data-transition="slide">Back</a>
+				<h3 id="homePageTitle">App Info</h3>
+				<a href="#settingsPage" data-icon="gear" class="ui-btn-right">Settings</a>
+			</div>
+			
+			<div data-role="content">
+				<h3>App Version</h3>
+				<h5>1.0</h5>
+				<hr/>
+				
+				<h3>Authors</h3>
+				<h5>Jared Schutt, Robert Barns, Aylannah Dylag, Nicolette Nugent</h5>
+				<hr/>
+			</div>
+			
+			<div data-role="footer" data-id="nav-bar" data-position="fixed">
+				<!--<div data-role="navbar">
+					<ul>
+						<li><a href="#homePage" data-icon="home" data-transition="slide">Home</a></li>
+						<li><a href="#settingsPage" data-icon="gear" data-transition="slide">Settings</a></li>
+						<li><a href="#infoPage" data-icon="info" data-transition="slide" class="ui-btn-active ui-state-persist">App Info</a></li>
+					</ul>
+				</div>-->
+			</div>
+        </div>
+		
+	
+		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.3.2.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
