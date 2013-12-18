@@ -1,0 +1,46 @@
+#feedHeader
+{
+	text-align:center;
+}
+
+#controls
+{
+	text-align:center;
+}
+
+#controlSeparator
+{
+	margin: 0 2em;
+}
+
+.articleTitle
+{
+	font-size: 1em;
+	white-space:normal;
+	
+}
+
+.articleAuthor, .articleSource, .publishDate, .articleVotes
+{
+	font-size: .70em;
+}
+
+.articleSummary
+{
+	font-size: .70em;
+	margin-top:1em;
+	white-space:normal;
+}
+
+.articleImage
+{
+	height:auto;
+	
+}
+
+#api_info
+{
+	list-style-type: none;
+	margin:0;
+	padding:0;
+}
